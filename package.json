@@ -1,0 +1,17 @@
+{
+  "name": "e2etests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test-brownser": "npx playwright test --headed",
+    "test:e2e": "npx playwright test && npx playwright show-report"    
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0"
+  }
+}
