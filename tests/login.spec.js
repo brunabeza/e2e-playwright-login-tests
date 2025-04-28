@@ -1,7 +1,6 @@
 import { test, expect } from '@playwright/test'
 import { LoginPage } from '../pages-object/login/login.page'
 import { DashboardPage } from '../pages-object/dashboard/dashboard.page'
-import { dashboardMappings } from '../pages-object/dashboard/dashboard.mappings'
 const { UserCollectionData } = require('../data/users/users.data')
 
 test('Should login with valid credentials', async ({ page }) => {
