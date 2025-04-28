@@ -1,22 +1,14 @@
-// tests/loginForm.spec.js
-const { test, expect } = require('@playwright/test');
-const { LoginPage } = require('../pages/LoginPage');
-const { FormPage } = require('../pages/FormPage');
+import { test, expect } from '@playwright/test'
+import { LoginPage } from '../pages-object/login/login.page'
+const { UserCollectionData } = require('../data/users/users.data')
 
-test('deve fazer login e acessar formulário de cadastro de funcionário', async ({ page }) => {
-  const loginPage = new LoginPage(page);
-  const formPage = new FormPage(page);
+test('Should login with valid credentials', async ({ page }) => {
+  
+  const loginPage = new LoginPage(page)
+  const validUser = UserCollectionData.find(user => user.userType === 'valid-user')
 
-  await loginPage.goto();
-  await loginPage.login('Admin', 'admin123');
-
-  // Esperar a dashboard aparecer
-  await expect(page).toHaveURL(/dashboard/);
-
-  // Navegar até o menu "PIM" -> "Add Employee"
-  await page.click('a:has-text("PIM")');
-  await page.click('a:has-text("Add Employee")');
-
-  // Validar que estamos no formulário "Add Employee"
-  await formPage.assertOnFormPage();
-});
+  await loginPage.login(validUser.username, validUser.password);
+  // Exemplo de validação depois do login
+  await expect(page).toHaveURL('/dashboard'); // ajuste conforme seu app
+  await expect(page.locator('text=Bem-vindo')).toBeVisible(); // ajuste conforme seu app
+})
