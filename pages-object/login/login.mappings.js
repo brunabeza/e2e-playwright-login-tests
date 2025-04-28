@@ -1,6 +1,6 @@
 export const loginMappings = {
-    usernameInput: '#username',
-    passwordInput: '#password',
-    loginButton: '#login-button',
+    usernameInput:'input[name="username"]',
+    passwordInput: 'input[name="password"]',
+    loginButton: 'button.orangehrm-login-button'
   }
   
