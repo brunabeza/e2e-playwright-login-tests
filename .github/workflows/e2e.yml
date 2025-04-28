@@ -51,11 +51,13 @@ jobs:
           publish_branch: gh-pages
 
       - name: Comment on PR with Playwright Report
-        uses: unsplash/comment-on-pr@v1
+        uses: peter-evans/create-or-update-comment@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.pull_request.number }}
           body: |
-            ## Playwright E2E Test Report
-            [View the report here](https://brunatester.github.io/playwright-tests/playwright-report/index.html)
+            ## ✅ Playwright E2E Test Report
+            [🔗 View the report here](https://brunabeza.github.io/e2Tests/)
+      
 
           
