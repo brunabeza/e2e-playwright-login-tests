@@ -32,7 +32,7 @@ jobs:
       - name: Run Playwright E2E tests
         run: |
           npx playwright test --reporter=html,json
-
+          
       - name: Upload Playwright HTML Report
         uses: actions/upload-artifact@v4
         with:
@@ -44,3 +44,16 @@ jobs:
         with:
           name: playwright-json-report
           path: playwright-report/data/test-results.json
+
+      - name: Create comment with report link
+        if: github.event_name == 'pull_request'
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            ✅ Playwright test execution completed!
+            
+            - [Download HTML Report from Artifacts](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
+
+            - Artifacts are available after the workflow run is completed.
+
