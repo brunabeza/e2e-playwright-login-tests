@@ -8,7 +8,7 @@ export class LoginPage {
     this.loginButton = page.locator(loginMappings.loginButton)
   }
   async login(username, password) {
-    await this.page.goto('/login')
+    await this.page.goto('/')
     await this.usernameInput.fill(username)
     await this.passwordInput.fill(password)
     await this.loginButton.click()
