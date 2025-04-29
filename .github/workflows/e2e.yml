@@ -81,14 +81,11 @@ jobs:
         with:
           script: |
             const reportUrl = `https://<your-github-username>.github.io/<your-repo-name>/playwright-report/index.html`;
-            github.rest.issues.createComment({
+            await github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: ### Relatório Playwright :bar_chart:\n[Visualizar Relatório Playwright](${reportUrl})
+              body: `### Relatório Playwright :bar_chart:\n[Visualizar Relatório Playwright](${reportUrl})`
             })
-            return  reportUrl
-          
-      
-
-          
+            return reportUrl
+        
