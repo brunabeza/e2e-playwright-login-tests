@@ -10,6 +10,6 @@ export default defineConfig({
     headless: true,
     viewport: { width: 1280, height: 720 },
     actionTimeout: 10000,
-    baseURL: 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/',
+    baseURL: 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login',
   },
 })
