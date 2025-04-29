@@ -1,13 +1,12 @@
-import { admindMappings } from './admin.mappings.js'
+import { adminMappings } from './admin.mappings'
 
 export class AdminPage {
   constructor(page) {
-    this.page = page;
+    this.page = page
     this.adminMenu = page.locator(adminMappings.adminMenu)
   }
 
-  async clickDashboardMenu() {
-    await this.page.getByText(adminMappings.adminMenu).click()
+  async clickAdminMenu() {
+    await this.adminMenu.click()
   }
 }
-
