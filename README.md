@@ -64,14 +64,14 @@ To write new tests, create a new file in the **tests** directory and import the 
 For example:
 
 ```javascript
-import { test, expect } from '@playwright/test';
-import { LoginPage } from '../pages-object/login/login.page';
+import { test, expect } from '@playwright/test'
+import { LoginPage } from '../pages-object/login/login.page'
 
 test('should login with valid credentials', async ({ page }) => {
-  const loginPage = new LoginPage(page);
-  await loginPage.login('username', 'password');
-  await expect(page).toHaveURL('/dashboard');
-});
+  const loginPage = new LoginPage(page)
+  await loginPage.login('username', 'password')
+  await expect(page).toHaveURL('/dashboard')
+})
 ```
 
 ## Contributing
