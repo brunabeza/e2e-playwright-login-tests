@@ -1,17 +1,18 @@
-import { loginMappings } from './login.mappings'
+const { loginMappings } = require('./login.mappings.js');
 
-export class LoginPage {
+class LoginPage {
   constructor(page) {
     this.page = page;
-    this.usernameInput = page.locator(loginMappings.usernameInput)
-    this.passwordInput = page.locator(loginMappings.passwordInput)
-    this.loginButton = page.locator(loginMappings.loginButton)
+    this.usernameInput = page.locator(loginMappings.usernameInput);
+    this.passwordInput = page.locator(loginMappings.passwordInput);
+    this.loginButton = page.locator(loginMappings.loginButton);
   }
+
   async login(username, password) {
-    await this.page.goto('/')
-    await this.usernameInput.fill(username)
-    await this.passwordInput.fill(password)
-    await this.loginButton.click()
+    await this.usernameInput.fill(username);
+    await this.passwordInput.fill(password);
+    await this.loginButton.click();
   }
 }
 
+module.exports = { LoginPage };

@@ -1,4 +1,4 @@
-export const adminMappings = {
+module.exports.adminMappings = {
     adminMenu: 'span.oxd-text:has-text("Admin")'
   }
   
