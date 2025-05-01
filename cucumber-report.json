@@ -1,0 +1,92 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login-and-navigation;successful-login-and-admin-page-access",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Successful login and admin page access",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 280455881
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "tests/steps/login.step.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 825086089
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I log in as a valid user",
+            "match": {
+              "location": "tests/steps/login.step.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2011003934
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I open the admin menu",
+            "match": {
+              "location": "tests/steps/login.step.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 319401914
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I should see the list of admin records",
+            "match": {
+              "location": "tests/steps/login.step.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 382774398
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 41791051
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login-and-navigation",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login and navigation",
+    "tags": [],
+    "uri": "tests/features/login.feature"
+  }
+]
