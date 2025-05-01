@@ -1,4 +1,5 @@
 module.exports.adminMappings = {
-    adminMenu: 'span.oxd-text:has-text("Admin")'
+    adminMenu: 'Admin',
+    menuText: 'Records Found'
   }
   

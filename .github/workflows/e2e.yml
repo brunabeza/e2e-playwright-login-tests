@@ -32,19 +32,21 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install Cucumber
+        run: npm install -g cucumber
+
       - name: Install Playwright
         run: npx playwright install
 
-      - name: Run Playwright E2E tests
+      - name: Run E2E tests
         run: |
-          npx playwright test --reporter=html
-          ls -la playwright-report
+          npm run test
           
       - name: Store Playwright HTML Report
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-html-report
-          path: playwright-report/
+          name: report
+          path: reports/
 
   report:
     runs-on: ubuntu-latest
@@ -65,14 +67,18 @@ jobs:
       - name: Download Playwright HTML Report
         uses: actions/download-artifact@v4
         with:
-          name: playwright-html-report          
-          path: ./playwright-report
+          name: report
+          path: reports/
+      
+      - name: Generate HTML Report
+        run: |
+          npm run generate-report
 
       - name: Publish Playwright HTML Report
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          publish_dir: ./playwright-report
+          publish_dir: ./reports
           publish_branch: gh-pages
 
       - name: Comment on PR with Playwright Report
