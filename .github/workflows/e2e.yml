@@ -40,7 +40,7 @@ jobs:
 
       - name: Run E2E tests
         run: |
-          npm run test
+          npm run test:ci
           
       - name: Store Playwright HTML Report
         uses: actions/upload-artifact@v4
@@ -69,10 +69,6 @@ jobs:
         with:
           name: report
           path: reports/
-      
-      - name: Generate HTML Report
-        run: |
-          npm run generate-report
 
       - name: Publish Playwright HTML Report
         uses: peaceiris/actions-gh-pages@v4
