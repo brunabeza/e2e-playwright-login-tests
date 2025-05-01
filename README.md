@@ -1,86 +1,80 @@
+# E2E Tests with Playwright and Cucumber
 
-# e2eTests
+This project contains end-to-end (E2E) automated tests using [Playwright](https://playwright.dev/) and [Cucumber](https://cucumber.io/) in JavaScript. It follows the Page Object Model (POM) design pattern and is structured for maintainability and scalability.
 
-## Overview
-e2eTests is an end-to-end testing project designed to automate testing for a web application. The project uses Playwright, a popular testing framework, to write and run tests.
+## 📁 Project Structure
 
-## Structure
-The project is organized into the following directories:
-
-- `e2eTests/`
-  - `data/`
-  - `pages-object/`
-    - `login/`
-    - `admin/`
-  - `tests/`
-  - `playwright.config.js`
-  - `README.md`
-
-- **pages-object**: contains page object classes that encapsulate the functionality of each page in the application.
-- **tests**: contains test files that use the page object classes to write end-to-end tests.
-- **data**: contains data files used to drive the tests.
-- **playwright.config.js**: contains configuration settings for Playwright.
-
-## Configuration
-Update the [playwright.config.js](http://_vscodecontentref_/3) file to set the base URL for the application under test. For example:
-
-```javascript
-use: {
-  baseURL: 'https://example.com',
-}
-
-## Objective
-The objective of this project is to provide a comprehensive set of end-to-end tests for the web application, ensuring that it functions as expected and meets the required standards.
-
-## Dependencies
-The project depends on the following package:
-
-- `@playwright/test`: provides the testing framework, APIs, test runner, and reporting capabilities.
-
-## How to Run
-To run the tests, follow these steps:
-
-1. Install the dependencies by running:
-   ```bash
-   npm install
-   ```
-2. Configure the `playwright.config.js` file to point to the application under test.
-3. Run the tests using the command:
-   ```bash
-   npx playwright test
-   ```
-
-## Additional Commands
-
-- Run tests in headed mode:
-  ```bash
-  npx playwright test --headed
-
-
-
-## Writing Tests
-To write new tests, create a new file in the **tests** directory and import the relevant page object classes. Use the page object classes to write test steps that interact with the application.
-
-For example:
-
-```javascript
-import { test, expect } from '@playwright/test'
-import { LoginPage } from '../pages-object/login/login.page'
-
-test('should login with valid credentials', async ({ page }) => {
-  const loginPage = new LoginPage(page)
-  await loginPage.login('username', 'password')
-  await expect(page).toHaveURL('/dashboard')
-})
+```
+├── .github/workflows/        # GitHub Actions CI configuration
+├── data/                     # Test data
+│   └── users/                # User credentials and related data
+├── helpers/                 # Utility functions
+├── pages-object/            # Page Objects (POM structure)
+│   ├── login/               # Login page objects and mappings
+│   └── admin/               # Admin page objects and mappings
+├── reports/                 # Generated test reports
+├── tests/
+│   ├── features/            # Cucumber feature files
+│   └── steps/               # Step definitions
+├── .gitignore               # Files ignored by Git
+├── cucumber.js              # Cucumber configuration
+├── generate-report.js       # Script to generate HTML report
+├── package.json             # Project metadata and scripts
+├── package-lock.json        # Dependency lock file
+├── playwright.config.js     # Playwright configuration
+└── README.md                # Project documentation
 ```
 
-## Contributing
-Contributions are welcome! To contribute:
+## 🚀 Getting Started
 
-1. Fork the repository.
-2. Clone your forked repository:
-   ```bash
-   git clone https://github.com/your-username/e2eTests.git
+### 1. Clone the repository
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+```bash
+git clone https://github.com/your-username/e2eTests.git
+cd e2eTests
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the tests
+
+```bash
+npm test
+```
+
+### 4. Generate the HTML report
+
+```bash
+npm run report
+```
+
+The report will be available in the `reports/` folder.
+
+## 🧪 Scripts
+
+| Command           | Description                          |
+|------------------|--------------------------------------|
+| `npm test`       | Executes all E2E tests               |
+| `npm run report` | Generates HTML report from results   |
+
+## 🛠 Technologies Used
+
+- [Playwright](https://playwright.dev/)
+- [Cucumber.js](https://github.com/cucumber/cucumber-js)
+- [Node.js](https://nodejs.org/)
+
+## ✅ CI Integration
+
+This project uses GitHub Actions for continuous integration. The workflow is defined in `.github/workflows/e2e.yml` and runs the tests on every push or pull request.
+
+## 🤝 Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## 📄 License
+
+This project is licensed under the MIT License.
