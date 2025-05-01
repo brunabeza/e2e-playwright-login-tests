@@ -1,12 +1,8 @@
 # NodeJS dependencies
 node_modules/
 
-# Lockfile
-package-lock.json
+# Test reports
+reports/
 
-# Test results
-test-results/
 
-# Playwright report
-playwright-report/
 

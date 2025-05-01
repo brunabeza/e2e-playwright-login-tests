@@ -1,12 +1,13 @@
-import { adminMappings } from './admin.mappings'
+const { adminMappings } = require('./admin.mappings')
 
-export class AdminPage {
+class AdminPage {
   constructor(page) {
     this.page = page
-    this.adminMenu = page.locator(adminMappings.adminMenu)
   }
 
   async clickAdminMenu() {
-    await this.adminMenu.click()
+    await this.page.getByRole('link', { name: adminMappings.adminMenu }).click()
   }
 }
+
+module.exports = { AdminPage }

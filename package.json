@@ -1,17 +1,26 @@
 {
   "name": "e2etests",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "e2eTests is an end-to-end testing project designed to automate testing for a web application. The project uses Playwright, a popular testing framework, to write and run tests.",
+  "main": "playwright.config.js",
+  "directories": {
+    "test": "tests"
+  },
   "scripts": {
-    "test": "npx playwright test",
-    "test-brownser": "npx playwright test --headed",
-    "test:e2e": "npx playwright test && npx playwright show-report"    
+    "test": "cucumber-js tests/features/login.feature",
+    "report": "node generate-report.js",
+    "test:ci": "cucumber-js tests/features/login.feature && node generate-report.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "^1.52.0",
+    "chai": "^5.2.0",
+    "playwright": "^1.52.0"
+  },
   "devDependencies": {
-    "@playwright/test": "^1.52.0"
+    "@cucumber/cucumber": "^11.2.0",
+    "cucumber-html-reporter": "^7.2.0"
   }
 }
