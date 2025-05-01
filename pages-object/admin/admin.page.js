@@ -1,14 +1,14 @@
-const { adminMappings } = require('./admin.mappings.js');
+const { adminMappings } = require('./admin.mappings')
 
 class AdminPage {
   constructor(page) {
-    this.page = page;
-    this.adminMenu = page.locator(adminMappings.adminMenu);
+    this.page = page
+    this.adminMenu = page.locator(adminMappings.adminMenu)
   }
 
   async clickAdminMenu() {
-    await this.adminMenu.click();
+    await this.adminMenu.click()
   }
 }
 
-module.exports = { AdminPage };
+module.exports = { AdminPage }
