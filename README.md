@@ -54,8 +54,8 @@ npm run report
 
 The report will be available in the `reports/` folder.
 
+Evidence from testing:
 ![image](https://github.com/user-attachments/assets/aa6035cc-ee08-42b8-8dfd-6a6bf2e7e585)
-
 
 ## 🧪 Scripts
 
@@ -73,6 +73,11 @@ The report will be available in the `reports/` folder.
 ## ✅ CI Integration
 
 This project uses GitHub Actions for continuous integration. The workflow is defined in `.github/workflows/e2e.yml` and runs the tests on every push or pull request.
+
+Evidence from github action:
+![image](https://github.com/user-attachments/assets/cf88c354-580b-489e-ba5e-4ea26e66f549)
+![image](https://github.com/user-attachments/assets/46a44cd4-5817-4dd1-8bc4-7e9bfe75f6ff)
+![image](https://github.com/user-attachments/assets/51793f4b-8f2b-4b93-a133-c71fbcd414a0)
 
 ## 🤝 Contributing
 
