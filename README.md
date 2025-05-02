@@ -54,6 +54,9 @@ npm run report
 
 The report will be available in the `reports/` folder.
 
+![image](https://github.com/user-attachments/assets/aa6035cc-ee08-42b8-8dfd-6a6bf2e7e585)
+
+
 ## 🧪 Scripts
 
 | Command           | Description                          |
