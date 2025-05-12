@@ -52,5 +52,4 @@ Then('I should see the list of admin records', async () => {
 Then('an error message should be displayed', async () => {
   await expect(page.locator(loginMappings.loginInvalidMessage)).toBeVisible()
   await expect(page.locator(loginMappings.loginInvalidMessage)).toHaveText('Invalid credentials')
-  //await expect(loginInvalidMessage).toHaveText('Invalid credentials')
 })
