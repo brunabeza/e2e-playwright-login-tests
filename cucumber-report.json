@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 2376133025
+              "duration": 315468704
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2555312112
+              "duration": 1233099949
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4516664581
+              "duration": 2732663906
             }
           },
           {
@@ -49,11 +49,11 @@
             "line": 6,
             "name": "I open the admin menu",
             "match": {
-              "location": "tests/steps/login.step.js:35"
+              "location": "tests/steps/login.step.js:43"
             },
             "result": {
               "status": "passed",
-              "duration": 696811588
+              "duration": 398250669
             }
           },
           {
@@ -62,11 +62,11 @@
             "line": 7,
             "name": "I should see the list of admin records",
             "match": {
-              "location": "tests/steps/login.step.js:39"
+              "location": "tests/steps/login.step.js:48"
             },
             "result": {
               "status": "passed",
-              "duration": 885870661
+              "duration": 885139914
             }
           },
           {
@@ -74,7 +74,73 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 113296878
+              "duration": 41289472
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-and-navigation;unsuccessful-login",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Unsuccessful login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 114786174
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "tests/steps/login.step.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1175423383
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I log in as an invalid user",
+            "match": {
+              "location": "tests/steps/login.step.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1462916870
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "an error message should be displayed",
+            "match": {
+              "location": "tests/steps/login.step.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15065835
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 26579272
             }
           }
         ],
