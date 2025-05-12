@@ -30,8 +30,8 @@ This project contains end-to-end (E2E) automated tests using [Playwright](https:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/e2eTests.git
-cd e2eTests
+git clone https://github.com/brunabeza/e2e-playwright-login-tests.git
+cd e2e-playwright-login-tests
 ```
 
 ### 2. Install dependencies
@@ -82,10 +82,7 @@ Evidence from GitHub action:
 ![image](https://github.com/user-attachments/assets/46a44cd4-5817-4dd1-8bc4-7e9bfe75f6ff)
 ![image](https://github.com/user-attachments/assets/51793f4b-8f2b-4b93-a133-c71fbcd414a0)
 
-## 🤝 Contributing
+## 📬 Contact
 
-The pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-## 📄 License
-
-This project is licensed under the MIT License.
+Developed by **@brunabeza**  
+[LinkedIn](https://www.linkedin.com/in/brunabeza)
